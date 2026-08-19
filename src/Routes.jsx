@@ -1,12 +1,35 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import About from "./pages/About";
+import AppLayout from "./components/appLayout/AppLayout";
+import Services from "./pages/Services";
+import Employees from "./pages/Employees";
+import Subscriptions from "./pages/Subscriptions";
 
 const routes = createBrowserRouter(
     createRoutesFromElements(
-        <Route
-          index
-          element={<Home/>}
-        />
+        <Route element={<AppLayout />}>
+            <Route
+                index
+                element={<Home />}
+            />
+            <Route 
+                path="om"
+                element={<About />}
+            />
+            <Route 
+                path="tjenester"
+                element={<Services />}
+            />
+            <Route 
+                path="medarbejdere"
+                element={<Employees />}
+            />
+            <Route 
+                path="priser"
+                element={<Subscriptions />}
+            />
+        </Route>
     )
 )
 
