@@ -12,7 +12,7 @@ export default function Home() {
             subtitle="Det bedste fitnesscenter - hvor styrke og sundhed vokser sammen"
             ctaBtn/>
             <main>
-                
+
             </main>
             <Footer />
         </div>

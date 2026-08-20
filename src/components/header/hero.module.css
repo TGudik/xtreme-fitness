@@ -27,9 +27,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  padding: 10px 0;
+  height: 80%;
   width: 100%;
-  padding: 20px 0;
   color: white;
   display: flex;
   flex-direction: column;
@@ -62,20 +62,21 @@
 }
 
 .ctaBtn {
+    font-size: 12px;
     font-family: var(--body);
     color: var(--light);
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
     border: 1px solid var(--light);
-    padding: 8px 12px;
+    padding: 4px 8px;
     border-radius: 100px;
 
     div {
         background-color: var(--primary);
-        padding: 5px 12px;
+        padding: 2px 8px;
         border-radius: 100px;
     }
 }
