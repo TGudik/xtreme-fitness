@@ -1,0 +1,51 @@
+.cardWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px 50px;
+}
+
+.empImage {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.nameNarea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+h3 {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 26px;
+    font-family: var(--heading);
+    line-height: 1;
+}
+
+p {
+    color: black;
+    font-size: 20px;
+    font-family: var(--body);
+}
+
+.someIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.someBg {
+    /* linear gradient lavet med ai */
+    background: linear-gradient(160deg, #dd3b3f 0%, #e2603f 50%, #e68a63 100%); 
+    border-radius: 50%;
+    padding: 10px;
+    display: grid;
+    place-content: center;
+}

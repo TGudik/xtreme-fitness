@@ -1,10 +1,15 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
+
+/* Pages imports */
 import Home from "./pages/Home";
 import About from "./pages/About";
 import AppLayout from "./components/appLayout/AppLayout";
 import Services from "./pages/Services";
 import Employees from "./pages/Employees";
 import Subscriptions from "./pages/Subscriptions";
+
+/* Dataloader imports */
+import { employeesLoader } from "./loaders/Dataloaders";
 
 const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -24,6 +29,7 @@ const routes = createBrowserRouter(
             <Route 
                 path="medarbejdere"
                 element={<Employees />}
+                loader={employeesLoader}
             />
             <Route 
                 path="priser"
