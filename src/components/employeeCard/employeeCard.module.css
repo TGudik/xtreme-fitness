@@ -49,3 +49,13 @@ p {
     display: grid;
     place-content: center;
 }
+
+.colorSwap {
+    background: #fff;
+}
+
+.swapColor {
+    p, h3 {
+        color: white;
+    }
+}

@@ -10,7 +10,7 @@ export default function Navigation() {
 
     return (
       <div className={styles.navWrapper}>
-        <Link to="/">
+        <Link onClick={() => setOpen(false)} to="/">
           <img src={logo} alt="Extreme Fitness" />
         </Link>
         <div className={styles.menuWrapper}>

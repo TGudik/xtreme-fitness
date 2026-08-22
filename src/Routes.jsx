@@ -9,7 +9,7 @@ import Employees from "./pages/Employees";
 import Subscriptions from "./pages/Subscriptions";
 
 /* Dataloader imports */
-import { employeesLoader } from "./loaders/Dataloaders";
+import { employeesLoader, homeLoader, pricesLoader } from "./loaders/Dataloaders";
 
 const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -17,6 +17,7 @@ const routes = createBrowserRouter(
             <Route
                 index
                 element={<Home />}
+                loader={homeLoader}
             />
             <Route 
                 path="om"
@@ -34,6 +35,7 @@ const routes = createBrowserRouter(
             <Route 
                 path="priser"
                 element={<Subscriptions />}
+                loader={pricesLoader}
             />
         </Route>
     )

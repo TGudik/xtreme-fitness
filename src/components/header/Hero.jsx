@@ -1,3 +1,4 @@
+import CtaBtn from "../ctaBtn/CtaBtn";
 import styles from "./hero.module.css"
 import { Link } from "react-router-dom"
 
@@ -14,9 +15,7 @@ export default function Hero({image, company, title, subtitle, ctaBtn}) {
           {title && <h1>{title}</h1>}
           {subtitle && <h3>{subtitle}</h3>}
           {ctaBtn && (
-            <Link to="/tilmeld" className={styles.ctaBtn}>
-              Tilmeld dig nu <div>{String.fromCharCode(9658)}</div>
-            </Link>
+            <CtaBtn />
           )}
         </div>
       </div>
