@@ -1,13 +1,18 @@
 import Hero from "../components/header/Hero";
 import heroImg from "../assets/headers/servicesHeader.png"
 import Footer from "../components/footer/Footer";
+import Exercises from "../components/exercises/Exercises";
+import { useLoaderData } from "react-router-dom";
 
 export default function Services() {
+    const {exercises, services} = useLoaderData()
 
     return(
         <div>
             <Hero image={heroImg} title="TJENESTER"/>
-            <main></main>
+            <main>
+                <Exercises data={exercises} />
+            </main>
             <Footer />
         </div>
     )

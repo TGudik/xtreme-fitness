@@ -1,0 +1,21 @@
+.cardWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    width: 66%;
+}
+
+.title {
+    font-weight: 500;
+    font-family: var(--heading);
+    font-size: 25px;
+}
+
+.teaser {
+    color: #777;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+}
