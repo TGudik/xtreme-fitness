@@ -1,0 +1,35 @@
+.sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.sectionIntro {
+    background: linear-gradient(160deg, #dd3b3f 0%, #e2603f 50%, #e68a63 100%);
+    padding: 70px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cardsWrapper {
+    transform: translateY(-70px);
+}
+
+.introHeading, .introSubheading {
+    color: #fff;
+    text-align: center;
+    font-family: var(--heading);
+}
+
+.introHeading {
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 28%;
+}
+
+.introSubheading {
+    font-weight: 600;
+    font-size: 28px;
+}

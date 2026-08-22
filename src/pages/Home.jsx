@@ -5,9 +5,10 @@ import EmployeeCards from "../components/employeeCards/EmployeeCards";
 import { useLoaderData } from "react-router-dom";
 import Prices from "../components/prices/Prices";
 import Exercises from "../components/exercises/Exercises";
+import ServiceCards from "../components/serviceCards/ServiceCards";
 
 export default function Home() {
-    const {employees, prices, exercises} = useLoaderData()
+    const {employees, prices, exercises, services} = useLoaderData()
 
     return (
         <div>
@@ -19,6 +20,7 @@ export default function Home() {
             ctaBtn/>
             <main>
                 <Exercises data={exercises}/>
+                <ServiceCards data={services}/>
                 <Prices data={prices} />
                 <EmployeeCards data={employees} colorSwap/>
             </main>

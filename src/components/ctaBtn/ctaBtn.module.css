@@ -17,3 +17,12 @@
         border-radius: 100px;
     }
 }
+
+.secColor {
+    background: linear-gradient(160deg, #dd3b3f 0%, #e2603f 50%, #e68a63 100%);
+
+    div {
+        background: #fff;
+        color: #dd3b3f;
+    }
+}

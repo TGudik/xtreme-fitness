@@ -45,15 +45,17 @@ export const servicePageLoader = async () => {
 }
 
 export const homeLoader = async () => {
-    const [employees, prices, exercises] = await Promise.all([
+    const [employees, prices, exercises, services] = await Promise.all([
         employeesLoader(),
         pricesLoader(),
-        exercisesLoader()
+        exercisesLoader(),
+        servicesLoader()
     ])
 
     return {
         employees,
         prices,
-        exercises
+        exercises,
+        services
     }
 }
