@@ -1,0 +1,30 @@
+.blogWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.blogImg{
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+.blogTitle {
+    font-family: var(--heading);
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.blogBody {
+    font-family: var(--body);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 2;
+    color: #777;
+}

@@ -9,7 +9,8 @@ import Employees from "./pages/Employees";
 import Subscriptions from "./pages/Subscriptions";
 
 /* Dataloader imports */
-import { aboutPageLoader, employeePageLoader, homeLoader, servicePageLoader, subscriptionsPageLoader } from "./loaders/Dataloaders";
+import { aboutPageLoader, blogById, employeePageLoader, homeLoader, servicePageLoader, subscriptionsPageLoader } from "./loaders/Dataloaders";
+import Blog from "./pages/Blog";
 
 const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -19,6 +20,10 @@ const routes = createBrowserRouter(
                 element={<Home />}
                 loader={homeLoader}
             />
+            <Route 
+                path="blog/:id"
+                element={<Blog />}
+                loader={blogById}/>
             <Route 
                 path="om"
                 element={<About />}

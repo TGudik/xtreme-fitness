@@ -48,8 +48,17 @@ export const blogsLoader = async () => {
     return data
 }
 
+export const blogById = async ({params}) => {
+    const res = await fetch(`${apiUrl}/blog/${params.id}`)
+    if (!res.ok) throw new Response("Fejl i at hente blog fra id", {status: res.status})
+    const preData = await res.json()
+    const data = preData.data
+    return data
+} 
+
 
 /* Page loaders */
+
 export const aboutPageLoader = async () => {
     const [ blogs ] = await Promise.all([
         blogsLoader()

@@ -3,6 +3,7 @@
     width: 100vw;
     aspect-ratio: calc(16/9);
     overflow: hidden;
+    background: #000;
 }
 
 .heroImage {
