@@ -8,6 +8,7 @@ import Exercises from "../components/exercises/Exercises";
 import ServiceCards from "../components/serviceCards/ServiceCards";
 import Reviews from "../components/reviews/Reviews";
 import BlogCard from "../components/blogCard/BlogCard";
+import AboutSection from "../components/aboutSection/AboutSection";
 
 export default function Home() {
     const {employees, prices, exercises, services, reviews, blogs} = useLoaderData()
@@ -22,6 +23,7 @@ export default function Home() {
             ctaBtn/>
             <main>
                 <Exercises data={exercises}/>
+                <AboutSection homePage/>
                 <ServiceCards data={services}/>
                 <Reviews data={reviews} />
                 <Prices data={prices} />

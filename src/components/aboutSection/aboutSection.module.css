@@ -1,0 +1,138 @@
+.sectionWrapper {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 90px;
+}
+
+.homeBg {
+    position: absolute;
+    object-fit: cover;
+    object-position: 65% top;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+.headerImg {
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.aboutBody {
+    text-align: center;
+    font-family: var(--body);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 2;
+    color: #777;
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+
+.homeAbout {
+    color: white;
+}
+
+.dataSection {
+    background: linear-gradient(160deg, #dd3b3f 0%, #e2603f 50%, #e68a63 100%);
+    padding: 20px 40px;
+    position: relative;
+    width: 100%;
+}
+
+.homeDataBg {
+    background: transparent;
+}
+
+.dataGrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+
+.dataGrid>* {
+    display: flex;
+    flex-direction: column;
+}
+
+.dataGrid>*:nth-child(1), .dataGrid>*:nth-child(3) {
+    align-items: start;
+}
+.dataGrid>*:nth-child(2), .dataGrid>*:nth-child(4) {
+    align-items: end;
+}
+
+.dataValue {
+    font-family: var(--body);
+    font-size: 30px;
+    line-height: 25px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 6px;
+}
+
+.homeValue {
+    color: var(--primary);
+}
+
+.dataTitle {
+    font-family: var(--heading);
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 600;
+    color: white;
+    white-space: nowrap;
+}
+
+.videoContainer {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 250px;
+    height: min-content;
+}
+
+.video{
+    width: 100%;
+    display: block;
+}
+
+.playBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
+}
+
+.readMoreBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min-content;
+    gap: 20px;
+    font-family: var(--body);
+    padding: 10px 12px;
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+    white-space: nowrap;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 1000px;
+
+    span {
+        background: linear-gradient(160deg, #dd3b3f 0%, #e2603f 50%, #e68a63 100%);
+        padding: 5px 15px;
+        border-radius: 1000px;
+    }
+}
