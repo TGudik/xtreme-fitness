@@ -1,0 +1,57 @@
+.reviewsWrapper {
+    display: grid;
+    text-align: center;
+    overflow: hidden;
+}
+
+.reviewBg {
+    grid-area: 1/1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.reviewsContent {
+    grid-area: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 60px;
+}
+
+.sectionHeading {
+    font-family: var(--heading);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--primary);
+    letter-spacing: 28%;
+    line-height: 1;
+}
+
+.sectionSubheading {
+    font-weight: 400;
+    font-family: var(--heading);
+    font-size: 36px;
+    color: white;
+}
+
+.reviewContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.apostrophy {
+    position: absolute;
+    left: -10px;
+    top: -35px;
+}
+
+.reviewImg {
+    width: 90%;
+    margin-top: 40px;
+}

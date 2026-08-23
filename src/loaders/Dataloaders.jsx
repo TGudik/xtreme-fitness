@@ -8,6 +8,14 @@ export const employeesLoader = async () => {
     return data
 }
 
+export const reviewsLoader = async () => {
+    const res = await fetch(`${apiUrl}/reviews`);
+    if (!res.ok) throw new Response("Fejl i at hente anmeldelser", { status: res.status });
+    const preData = await res.json();
+    const data = preData.data;
+    return data;
+}
+
 export const pricesLoader = async () => {
     const res = await fetch(`${apiUrl}/subscriptions`)
     if (!res.ok) throw new Response("Fejl i at hente priser", {status: res.status})
@@ -32,30 +40,45 @@ export const servicesLoader = async () => {
     return data
 }
 
+export const subscriptionsPageLoader = async () => {
+    const [prices, reviews] = await Promise.all([
+        pricesLoader(),
+        reviewsLoader()
+    ])
+
+    return {
+        prices, reviews
+    }
+}
+
 export const servicePageLoader = async () => {
-    const [exercises, services] = await Promise.all([
+    const [exercises, services, reviews] = await Promise.all([
         exercisesLoader(),
-        servicesLoader()
+        servicesLoader(),
+        reviewsLoader()
     ])
 
     return {
         exercises,
-        services
+        services,
+        reviews
     }
 }
 
 export const homeLoader = async () => {
-    const [employees, prices, exercises, services] = await Promise.all([
+    const [employees, prices, exercises, services, reviews] = await Promise.all([
         employeesLoader(),
         pricesLoader(),
         exercisesLoader(),
-        servicesLoader()
+        servicesLoader(),
+        reviewsLoader()
     ])
 
     return {
         employees,
         prices,
         exercises,
-        services
+        services,
+        reviews
     }
 }

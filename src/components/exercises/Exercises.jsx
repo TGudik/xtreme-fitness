@@ -2,6 +2,7 @@ import { useState } from "react"
 import styles from "./exercises.module.css"
 import PageIntro from "../pageIntro/PageIntro"
 import ExerciseCard from "../exerciseCard/ExerciseCard"
+import PrevNnextBtns from "../prevNnextBtns/PrevNnextBtns"
 
 export default function Exercises({data}) {
     const [index, setIndex] = useState(0)
@@ -20,10 +21,7 @@ export default function Exercises({data}) {
         <div className={styles.sectionWrapper}>
             <PageIntro heading={"DETTE TILBYDER VI"} subheading={"VI TILBYDER EKSKLUSIVE ØVELSER"} />
             <ExerciseCard image={currentExercise.image} title={currentExercise.title} teaser={currentExercise.teaser} />
-            <div className={styles.prevNnextBtn}>
-                <button onClick={prevIndex} className={styles.btn}>{String.fromCharCode(8592)}</button>
-                <button onClick={nextIndex} className={styles.btn}>{String.fromCharCode(8594)}</button>
-            </div>
+            <PrevNnextBtns prevI={prevIndex} nextI={nextIndex}/>
         </div>
     )
 }

@@ -6,14 +6,3 @@
     padding-bottom: 30px;
 }
 
-.prevNnextBtn {
-    display: flex;
-    gap: 20px;
-}
-
-.btn {
-    padding: 10px;
-    border-radius: 50%;
-    background: var(--dark);
-    color: var(--light);
-}

@@ -6,9 +6,10 @@ import { useLoaderData } from "react-router-dom";
 import Prices from "../components/prices/Prices";
 import Exercises from "../components/exercises/Exercises";
 import ServiceCards from "../components/serviceCards/ServiceCards";
+import Reviews from "../components/reviews/Reviews";
 
 export default function Home() {
-    const {employees, prices, exercises, services} = useLoaderData()
+    const {employees, prices, exercises, services, reviews} = useLoaderData()
 
     return (
         <div>
@@ -21,6 +22,7 @@ export default function Home() {
             <main>
                 <Exercises data={exercises}/>
                 <ServiceCards data={services}/>
+                <Reviews data={reviews} />
                 <Prices data={prices} />
                 <EmployeeCards data={employees} colorSwap/>
             </main>
