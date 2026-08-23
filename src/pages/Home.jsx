@@ -7,9 +7,10 @@ import Prices from "../components/prices/Prices";
 import Exercises from "../components/exercises/Exercises";
 import ServiceCards from "../components/serviceCards/ServiceCards";
 import Reviews from "../components/reviews/Reviews";
+import BlogCard from "../components/blogCard/BlogCard";
 
 export default function Home() {
-    const {employees, prices, exercises, services, reviews} = useLoaderData()
+    const {employees, prices, exercises, services, reviews, blogs} = useLoaderData()
 
     return (
         <div>
@@ -25,6 +26,7 @@ export default function Home() {
                 <Reviews data={reviews} />
                 <Prices data={prices} />
                 <EmployeeCards data={employees} colorSwap/>
+                <BlogCard data={blogs} />
             </main>
             <Footer />
         </div>

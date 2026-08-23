@@ -1,13 +1,18 @@
 import Hero from "../components/header/Hero";
 import heroImg from "../assets/headers/aboutHeader.png"
 import Footer from "../components/footer/Footer";
+import { useLoaderData } from "react-router-dom";
+import BlogCard from "../components/blogCard/BlogCard";
 
 export default function About() {
+    const {blogs} = useLoaderData()
 
     return(
         <div>
             <Hero image={heroImg} title={"OM OS"}/>
-            <main></main>
+            <main>
+                <BlogCard data={blogs} />
+            </main>
             <Footer />
         </div>
     )

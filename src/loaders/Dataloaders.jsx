@@ -40,38 +40,72 @@ export const servicesLoader = async () => {
     return data
 }
 
-export const subscriptionsPageLoader = async () => {
-    const [prices, reviews] = await Promise.all([
-        pricesLoader(),
-        reviewsLoader()
+export const blogsLoader = async () => {
+    const res = await fetch(`${apiUrl}/blogs`)
+    if (!res.ok) throw new Response("Fejl i at hente blogposts", {status: res.status})
+    const preData = await res.json()
+    const data = preData.data
+    return data
+}
+
+
+/* Page loaders */
+export const aboutPageLoader = async () => {
+    const [ blogs ] = await Promise.all([
+        blogsLoader()
     ])
 
     return {
-        prices, reviews
+        blogs
+    }
+}
+
+export const employeePageLoader = async () => {
+    const [ employees, blogs ] = await Promise.all([
+        employeesLoader(),
+        blogsLoader()
+    ]) 
+    return {
+        employees, blogs
+    }
+}
+
+export const subscriptionsPageLoader = async () => {
+    const [prices, reviews, blogs] = await Promise.all([
+        pricesLoader(),
+        reviewsLoader(),
+        blogsLoader()
+    ])
+
+    return {
+        prices, reviews, blogs
     }
 }
 
 export const servicePageLoader = async () => {
-    const [exercises, services, reviews] = await Promise.all([
+    const [exercises, services, reviews, blogs] = await Promise.all([
         exercisesLoader(),
         servicesLoader(),
-        reviewsLoader()
+        reviewsLoader(),
+        blogsLoader()
     ])
 
     return {
         exercises,
         services,
-        reviews
+        reviews,
+        blogs
     }
 }
 
 export const homeLoader = async () => {
-    const [employees, prices, exercises, services, reviews] = await Promise.all([
+    const [employees, prices, exercises, services, reviews, blogs] = await Promise.all([
         employeesLoader(),
         pricesLoader(),
         exercisesLoader(),
         servicesLoader(),
-        reviewsLoader()
+        reviewsLoader(),
+        blogsLoader()
     ])
 
     return {
@@ -79,6 +113,7 @@ export const homeLoader = async () => {
         prices,
         exercises,
         services,
-        reviews
+        reviews,
+        blogs
     }
 }

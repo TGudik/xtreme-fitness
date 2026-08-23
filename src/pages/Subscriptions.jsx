@@ -4,10 +4,11 @@ import Footer from "../components/footer/Footer";
 import Prices from "../components/prices/Prices";
 import { useLoaderData } from "react-router-dom";
 import Reviews from "../components/reviews/Reviews";
+import BlogCard from "../components/blogCard/BlogCard";
 
 export default function Subscriptions() {
 
-    const {prices, reviews} = useLoaderData()
+    const {prices, reviews, blogs} = useLoaderData()
 
     return(
         <div>
@@ -15,6 +16,7 @@ export default function Subscriptions() {
             <main>
                 <Prices data={prices}/>
                 <Reviews data={reviews}/>
+                <BlogCard data={blogs} />
             </main>
             <Footer />
         </div>

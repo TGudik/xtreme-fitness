@@ -5,9 +5,10 @@ import Exercises from "../components/exercises/Exercises";
 import { useLoaderData } from "react-router-dom";
 import ServiceCards from "../components/serviceCards/ServiceCards";
 import Reviews from "../components/reviews/Reviews";
+import BlogCard from "../components/blogCard/BlogCard";
 
 export default function Services() {
-    const {exercises, services, reviews} = useLoaderData()
+    const {exercises, services, reviews, blogs} = useLoaderData()
 
     return(
         <div>
@@ -16,6 +17,7 @@ export default function Services() {
                 <Exercises data={exercises} />
                 <ServiceCards data={services} />
                 <Reviews data={reviews} />
+                <BlogCard data={blogs} />
             </main>
             <Footer />
         </div>
