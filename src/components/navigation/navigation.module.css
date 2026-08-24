@@ -14,6 +14,21 @@
     }
 }
 
+.navRigth {
+    display: flex;
+    align-items: center;
+    gap: 10px
+    ;
+}
+
+.backofficeLink, .logoutBtn {
+    text-decoration: underline;
+    color: var(--primary);
+    font-family: var(--heading);
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .burger {
     position: relative;
     z-index: 999;

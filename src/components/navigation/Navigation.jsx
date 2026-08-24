@@ -3,10 +3,11 @@ import styles from "./navigation.module.css"
 import { Link } from "react-router-dom"
 import logo from "../../assets/icons/logo.png"
 import Hamburger from "hamburger-react"
+import { useAuth } from "../../context/AuthContext"
 
 export default function Navigation() {
     const [open, setOpen] = useState(false)
-
+    const {user, logout} = useAuth()
 
     return (
       <div className={styles.navWrapper}>
@@ -14,8 +15,12 @@ export default function Navigation() {
           <img src={logo} alt="Extreme Fitness" />
         </Link>
         <div className={styles.menuWrapper}>
-          <div className={styles.burger}>
-            <Hamburger color="#fff" toggled={open} toggle={setOpen} size={35} />
+          <div className={styles.navRigth}>
+            {user && <h1 onClick={logout} className={styles.logoutBtn}>LOG UD</h1>}
+            {user?.role === "admin" && <Link className={styles.backofficeLink} to="/backoffice">BACKOFFICE</Link>}
+            <div className={styles.burger}>
+              <Hamburger color="#fff" toggled={open} toggle={setOpen} size={35} />
+            </div>
           </div>
           <ul
             onClick={() => setOpen(false)}
@@ -41,9 +46,9 @@ export default function Navigation() {
                 Om Os
               </Link>
             </li>
-            <li onClick={() => setOpen(false)}>
+            {!user && <li onClick={() => setOpen(false)}>
               <Link to="/login" className={styles.navLink}>Log ind</Link>
-            </li>
+            </li>}
           </ul>
         </div>
       </div>

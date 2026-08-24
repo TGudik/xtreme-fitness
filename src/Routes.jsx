@@ -9,11 +9,12 @@ import Employees from "./pages/Employees";
 import Subscriptions from "./pages/Subscriptions";
 
 /* Dataloader imports */
-import { aboutPageLoader, blogById, employeePageLoader, homeLoader, servicePageLoader, subscriptionsPageLoader } from "./loaders/Dataloaders";
+import { aboutPageLoader, blogById, blogsLoader, employeePageLoader, homeLoader, servicePageLoader, subscriptionsPageLoader } from "./loaders/Dataloaders";
 import Blog from "./pages/Blog";
 import Login from "./pages/Login";
 import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 import Backoffice from "./pages/Backoffice";
+import BackofficeEdit from "./pages/BackofficeEdit";
 
 const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -58,6 +59,11 @@ const routes = createBrowserRouter(
                 <Route
                     index
                     element={<Backoffice />}
+                />
+                <Route
+                    path="edit"
+                    element={<BackofficeEdit />}
+                    loader={blogsLoader}
                 />
             </Route>
         </Route>

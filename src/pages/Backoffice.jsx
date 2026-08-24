@@ -1,5 +1,11 @@
+import Hero from "../components/header/Hero";
+import OfficeOverview from "../components/officeOverview/OfficeOverview";
+
 export default function Backoffice() {
     return(
-        <h1 className="">Backoffice</h1>
+        <div>
+            <Hero title={"BACKOFFICE"}/>
+            <OfficeOverview />
+        </div>
     )
 }
