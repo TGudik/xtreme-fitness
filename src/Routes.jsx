@@ -12,6 +12,8 @@ import Subscriptions from "./pages/Subscriptions";
 import { aboutPageLoader, blogById, employeePageLoader, homeLoader, servicePageLoader, subscriptionsPageLoader } from "./loaders/Dataloaders";
 import Blog from "./pages/Blog";
 import Login from "./pages/Login";
+import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
+import Backoffice from "./pages/Backoffice";
 
 const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -49,6 +51,15 @@ const routes = createBrowserRouter(
                 path="login"
                 element={<Login />}
             />
+            <Route 
+                path="backoffice" 
+                element={<ProtectedRoute />}
+            >
+                <Route
+                    index
+                    element={<Backoffice />}
+                />
+            </Route>
         </Route>
     )
 )

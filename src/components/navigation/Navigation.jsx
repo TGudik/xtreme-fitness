@@ -42,7 +42,7 @@ export default function Navigation() {
               </Link>
             </li>
             <li onClick={() => setOpen(false)}>
-              <Link className={styles.navLink}>Log ind</Link>
+              <Link to="/login" className={styles.navLink}>Log ind</Link>
             </li>
           </ul>
         </div>
