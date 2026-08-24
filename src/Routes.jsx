@@ -11,6 +11,7 @@ import Subscriptions from "./pages/Subscriptions";
 /* Dataloader imports */
 import { aboutPageLoader, blogById, employeePageLoader, homeLoader, servicePageLoader, subscriptionsPageLoader } from "./loaders/Dataloaders";
 import Blog from "./pages/Blog";
+import Login from "./pages/Login";
 
 const routes = createBrowserRouter(
     createRoutesFromElements(
@@ -43,6 +44,10 @@ const routes = createBrowserRouter(
                 path="priser"
                 element={<Subscriptions />}
                 loader={subscriptionsPageLoader}
+            />
+            <Route
+                path="login"
+                element={<Login />}
             />
         </Route>
     )

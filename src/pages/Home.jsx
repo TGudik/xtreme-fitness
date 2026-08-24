@@ -9,6 +9,7 @@ import ServiceCards from "../components/serviceCards/ServiceCards";
 import Reviews from "../components/reviews/Reviews";
 import BlogCard from "../components/blogCard/BlogCard";
 import AboutSection from "../components/aboutSection/AboutSection";
+import Contact from "../components/contact/Contact";
 
 export default function Home() {
     const {employees, prices, exercises, services, reviews, blogs} = useLoaderData()
@@ -28,6 +29,7 @@ export default function Home() {
                 <Reviews data={reviews} />
                 <Prices data={prices} />
                 <EmployeeCards data={employees} colorSwap/>
+                <Contact />
                 <BlogCard data={blogs} />
             </main>
             <Footer />

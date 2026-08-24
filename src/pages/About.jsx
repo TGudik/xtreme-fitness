@@ -4,6 +4,7 @@ import Footer from "../components/footer/Footer";
 import { useLoaderData } from "react-router-dom";
 import BlogCard from "../components/blogCard/BlogCard";
 import AboutSection from "../components/aboutSection/AboutSection";
+import Contact from "../components/contact/Contact";
 
 export default function About() {
     const {blogs} = useLoaderData()
@@ -13,6 +14,7 @@ export default function About() {
             <Hero image={heroImg} title={"OM OS"}/>
             <main>
                 <AboutSection />
+                <Contact />
                 <BlogCard data={blogs} />
             </main>
             <Footer />
